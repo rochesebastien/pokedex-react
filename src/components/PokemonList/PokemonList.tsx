@@ -1,8 +1,7 @@
-import { useParams } from 'react-router-dom';
 import './pokemonlist.css'
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
-import { getPokemons } from '../../data/PokemonRepository.js'
+import {getPokemons} from '../../api/PokemonRepository';
 
 // async function fetchData() {
 //     const response =  fetch('https://pokebuildapi.fr/api/v1/pokemon/');
@@ -11,27 +10,27 @@ import { getPokemons } from '../../data/PokemonRepository.js'
 // }
 
 function PokemonList() {
-    const [error, setError] = useState(null);
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [items, setItems] = useState([]);
-    
-    useEffect(() => {
-        const fetchExampleData = async () => {
-          const data = await getPokemons();
-          setPokemons(data);
-        };
-        fetchExampleData();
-      }, []);
-      
+    const [pokemons, setPokemons] = useState ([]) ;
 
+    useEffect (() => {
+        async function getPokemonsLoad () {
+            const pokemons = await getPokemons () ;
+            setPokemons(pokemons) ;
+        }
+        getPokemonsLoad ();
+    }, []);
     return (
-        <div className="screen_scroll">
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="" />
-            <span>Bulbizarre</span>
-            
+        <div className="pokemonlist-ctn">
+            <div className="screen_scroll">
+            {pokemons.map((pokemon) => (
+                    <Link className='pokemon_link' to={`/info/${pokemon.id}`}>
+                <img src={`${pokemon.image}`} alt="" />
+                <span>{pokemon.name}</span>
+                </Link>
+            ))}
+            </div>
         </div>
     )
-
     
   }
   

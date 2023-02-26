@@ -8,11 +8,13 @@ import {
 
 import Homepage from './pages/Homepage/Homepage';
 import Infopage from './pages/Infopage/Infopage';
+import PokemonList from './components/PokemonList/PokemonList';
 
 function App() {
 
   return (
     <div className="App">
+        <PokemonList />
           <Routes>
             <Route path="/info/:id" element={<Infopage />} />
             <Route path="/home" element={<Homepage />} />
