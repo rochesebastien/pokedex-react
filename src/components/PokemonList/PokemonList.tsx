@@ -23,7 +23,7 @@ function PokemonList() {
         <div className="pokemonlist-ctn">
             <div className="screen_scroll">
             {pokemons.map((pokemon) => (
-                    <Link className='pokemon_link' to={`/info/${pokemon.id}`}>
+                    <Link key={pokemon.id} className='pokemon_link' to={`/info/${pokemon.id}` }>
                 <img src={`${pokemon.image}`} alt="" />
                 <span>{pokemon.name}</span>
                 </Link>

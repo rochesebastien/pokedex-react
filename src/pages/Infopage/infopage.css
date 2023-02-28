@@ -1,3 +1,108 @@
-.infopage{
-    color: green;
-}
+.infopage {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: calc(100vw - 302px);
+  }
+  .infopage .right_ctn {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: #CCE3ED;
+    border-radius: 30px;
+    align-items: center;
+    background: #CCE3ED;
+    box-shadow: 11px 11px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 19px;
+    margin: 0 auto;
+  }
+  .infopage .deco {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px 10px;
+  }
+  .infopage .deco .circle {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 5%, rgb(23, 180, 194) 100%);
+    border: 3px solid white;
+  }
+  .infopage .deco .circle_color-ctn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+  }
+  .infopage .deco .circle_color-ctn span {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 0px 5px;
+    border: 1px solid black;
+  }
+  .infopage .deco .circle_color-ctn span:nth-child(1) {
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(255, 0, 0) 100%);
+  }
+  .infopage .deco .circle_color-ctn span:nth-child(2) {
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(255, 237, 0) 100%);
+  }
+  .infopage .deco .circle_color-ctn span:nth-child(3) {
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(0, 255, 49) 100%);
+  }
+  .infopage .pokemon-name-ctn {
+    display: flex;
+    align-items: center;
+    padding: 30px 0px;
+    width: 92%;
+  }
+  .infopage .pokemon-name-ctn span {
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: "Helvetica Neue", sans-serif;
+  }
+  .infopage .stats_ctn {
+    padding: 30px 0px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .infopage .stats_items {
+    width: 250px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 27px;
+    font-size: 3rem;
+    font-family: "Helvetica Neue", sans-serif;
+    background: #FFFFFF;
+    box-shadow: 11px 11px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 19px;
+    font-weight: bold;
+  }
+  .infopage .stats_items .row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .infopage .stats_items .row img {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .hide {
+    display: none !important;
+  }/*# sourceMappingURL=styles.css.map */
