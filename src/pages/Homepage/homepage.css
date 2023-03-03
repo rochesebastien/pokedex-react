@@ -4,3 +4,38 @@
     height: 100vh;
     width: calc(100vw - 300px);
   }
+
+  .coverclap_ctn{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    
+    display: flex;
+  }
+
+  .coverclap_left{
+    width: 300px;
+    background-color: lightgreen;
+  }
+  .coverclap_right{
+    width: calc(100vw - 300px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: cyan;
+    margin-left: 0%; /* Le monter à 100 pour ouvrir le pokédex */
+    
+  }
+
+  .coverclap_right button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50% / 0% / 0% / 0%;
+    margin-left: 25px;
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #3197CC 72.4%);
+  border: 7px solid #FFFFFF;
+  }
+

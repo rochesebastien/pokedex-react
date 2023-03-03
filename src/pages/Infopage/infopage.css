@@ -4,18 +4,6 @@
     height: 100vh;
     width: calc(100vw - 302px);
   }
-  .infopage .right_ctn {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    background-color: #CCE3ED;
-    border-radius: 30px;
-    align-items: center;
-    background: #CCE3ED;
-    box-shadow: 11px 11px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 19px;
-    margin: 0 auto;
-  }
   .infopage .deco {
     display: flex;
     align-items: flex-start;
@@ -55,52 +43,6 @@
   .infopage .deco .circle_color-ctn span:nth-child(3) {
     background: rgb(255, 255, 255);
     background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(0, 255, 49) 100%);
-  }
-  .infopage .pokemon-name-ctn {
-    display: flex;
-    align-items: center;
-    padding: 30px 0px;
-    width: 92%;
-  }
-  .infopage .pokemon-name-ctn span {
-    color: black;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-family: "Helvetica Neue", sans-serif;
-  }
-  .infopage .stats_ctn {
-    padding: 30px 0px;
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .infopage .stats_items {
-    width: 250px;
-    height: 170px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 27px;
-    font-size: 3rem;
-    font-family: "Helvetica Neue", sans-serif;
-    background: #FFFFFF;
-    box-shadow: 11px 11px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 19px;
-    font-weight: bold;
-  }
-  .infopage .stats_items .row {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .infopage .stats_items .row img {
-    width: 48px;
-    height: 48px;
   }
   
   .hide {

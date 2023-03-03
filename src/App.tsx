@@ -16,6 +16,7 @@ function App() {
     <div className="App">
         <PokemonList />
           <Routes>
+            <Route path="" element={<Homepage />} />
             <Route path="/info/:id" element={<Infopage />} />
             <Route path="/home" element={<Homepage />} />
             <Route path="/info" element={<Infopage />} />
