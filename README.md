@@ -23,7 +23,7 @@ npm run dev
 ```
 
 ## API used : 
-To get all my pokemons i use this api, that is very nice
+To get all my pokemons and their information i use this api, that is very nice!
 ```bash
 https://pokebuildapi.fr/api/v1
 ```

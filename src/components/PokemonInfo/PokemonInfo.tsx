@@ -17,7 +17,6 @@ function PokemonInfo(){
         }
         getPokemonLoad ();
     },[id]);
-
     return (
         <div className="right_ctn" >
                 <div className="pokemon-name-ctn">
@@ -33,7 +32,7 @@ function PokemonInfo(){
                             <span>Atk</span>
                         </div>
                         <div className="value">
-                            <span>{pokemon.stats.attack}</span>
+                            <span>{pokemon ? pokemon.stats.attack : '?'}</span>
                         </div>
                     </div>
                     <div className="stats_items">
@@ -42,7 +41,7 @@ function PokemonInfo(){
                             <span>Def</span>
                         </div>
                         <div className="value">
-                            <span>{pokemon.stats.defense}</span>
+                            {/* <span>{pokemon.stats.defense}</span> */}
                         </div>
                     </div>
                     <div className="stats_items">
@@ -51,16 +50,16 @@ function PokemonInfo(){
                             <span>Spd</span>
                         </div>
                         <div className="value">
-                            <span>{pokemon.stats.speed}</span>
+                            {/* <span>{pokemon.stats.speed}</span> */}
                         </div>
                     </div>
                     <div className="stats_items">
                         <div className="row">
                             <img src="/icons/Atk Spe.svg" alt=""/>
-                            <span>Atk spe</span>
+                            {/* <span>Atk spe</span> */}
                         </div>
                         <div className="value">
-                            <span>{pokemon.stats.special_attack}</span>
+                            {/* <span>{pokemon.stats.special_attack}</span> */}
                         </div>
                     </div>
                     <div className="stats_items">
@@ -69,7 +68,7 @@ function PokemonInfo(){
                          <span>Def spe</span>
                         </div>
                         <div className="value">
-                            <span>{pokemon.stats.special_defense}</span>
+                            {/* <span>{pokemon.stats.special_defense}</span> */}
                         </div>
                     </div>
                  </div>

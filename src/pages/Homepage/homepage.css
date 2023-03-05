@@ -1,8 +1,16 @@
 .homepage{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     height: 100vh;
     width: calc(100vw - 300px);
+  }
+
+
+  .coverlap_open .coverclap_right{
+    margin-left: 100%;
+    transition: 0.8s ease-in-out;
   }
 
   .coverclap_ctn{
@@ -18,14 +26,18 @@
 
   .coverclap_left{
     width: 300px;
-    background-color: lightgreen;
+    height: 100vh;
+    background-color: #EC1F25;
+    border-right: 4px solid rgb(156, 151, 151);
+    
   }
   .coverclap_right{
     width: calc(100vw - 300px);
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color: cyan;
+    background-color: #F04B4B;
     margin-left: 0%; /* Le monter à 100 pour ouvrir le pokédex */
     
   }
@@ -33,9 +45,47 @@
   .coverclap_right button{
     width: 100px;
     height: 100px;
-    border-radius: 50% / 0% / 0% / 0%;
+    border-radius: 50%;
     margin-left: 25px;
     background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #3197CC 72.4%);
-  border: 7px solid #FFFFFF;
+    border: 7px solid #FFFFFF;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+  .coverclap_right button:hover{
+    border: 3px solid #FFFFFF;
   }
 
+  .coverclap_right button:active{
+    background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #02ff5b 72.4%);
+  }
+
+  .control_panel_ctn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    background-color: cyan;
+    padding: 100px 20px;
+  }
+
+  .button_action_pannel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6495EC;
+    border:1px solid black;
+    margin: 2px;
+    width: 300px;
+    height: 100px;
+    border-radius: 5px;
+  }
+
+  .button_action_pannel img{
+    transform: scale(1.5);
+    margin-right: 1em;
+  }
+
+  .button_action_pannel:hover{
+    background-color: #517dc8;
+  }
