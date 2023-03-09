@@ -13,13 +13,24 @@ export async function getPokemons() {
   }
 }
 
-export async function getOnePokemon(id : string) {
+export async function getOnePokemon(id : number) {
   try {
     const response = await fetch(`${API_URL}/pokemon/`+id);
     const data = await response.json();
     return data
   } catch (error) {
-    console.error(error);
+    console.error("Erreur"+error);
+    return null
+    }
+}
+
+export async function SearchPokemonByName(name : string) {
+  try {
+    const response = await fetch(`${API_URL}/pokemon/`+name);
+    const data = await response.json();
+    return data
+  } catch (error) {
+    console.error("Erreur"+error);
     return null
     }
 }

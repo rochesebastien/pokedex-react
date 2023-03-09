@@ -38,6 +38,8 @@
     align-items: center;
     justify-content: flex-start;
     background-color: #F04B4B;
+    background-image: url('/redplate.jpg');
+    background-size: cover;
     margin-left: 0%; /* Le monter à 100 pour ouvrir le pokédex */
     
   }
@@ -46,9 +48,10 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin-left: 25px;
+    margin-left: -50px;
     background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #3197CC 72.4%);
-    border: 7px solid #FFFFFF;
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 5px 0px #B7BABC;
     cursor: pointer;
     transition: 0.2s ease-in-out;
   }
@@ -58,34 +61,39 @@
 
   .coverclap_right button:active{
     background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #02ff5b 72.4%);
+    box-shadow: 0px 0px 0px #B7BABC;
   }
 
   .control_panel_ctn{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
     width: 60%;
-    background-color: cyan;
+    background-color: rgb(76, 76, 76);
+    background-size: cover;
     padding: 100px 20px;
   }
 
   .button_action_pannel{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-color: #6495EC;
-    border:1px solid black;
-    margin: 2px;
-    width: 300px;
-    height: 100px;
+    padding: 14px 26px;
     border-radius: 5px;
+    background: #D0E2EC;
+    box-shadow: 0px 3px 0px #608397;
+    border-radius: 8px;
+    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+    text-decoration: none;
+    color: black;
   }
 
-  .button_action_pannel img{
+  /* .button_action_pannel img{
     transform: scale(1.5);
     margin-right: 1em;
-  }
+  } */
 
   .button_action_pannel:hover{
-    background-color: #517dc8;
+    background-color: #D0E2EC;
   }

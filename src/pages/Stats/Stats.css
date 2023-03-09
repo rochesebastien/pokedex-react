@@ -1,15 +1,15 @@
-.infopage {
+.stats_page {
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: calc(100vw - 302px);
   }
-  .infopage .deco {
+  .stats_page .deco {
     display: flex;
     align-items: flex-start;
     padding: 20px 10px;
   }
-  .infopage .deco .circle {
+  .stats_page .deco .circle {
     display: block;
     width: 80px;
     height: 80px;
@@ -18,13 +18,13 @@
     background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 5%, rgb(23, 180, 194) 100%);
     border: 3px solid white;
   }
-  .infopage .deco .circle_color-ctn {
+  .stats_page .deco .circle_color-ctn {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 30px;
   }
-  .infopage .deco .circle_color-ctn span {
+  .stats_page .deco .circle_color-ctn span {
     display: block;
     width: 32px;
     height: 32px;
@@ -32,15 +32,15 @@
     margin: 0px 5px;
     border: 1px solid black;
   }
-  .infopage .deco .circle_color-ctn span:nth-child(1) {
+  .stats_page .deco .circle_color-ctn span:nth-child(1) {
     background: rgb(255, 255, 255);
     background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(255, 0, 0) 100%);
   }
-  .infopage .deco .circle_color-ctn span:nth-child(2) {
+  .stats_page .deco .circle_color-ctn span:nth-child(2) {
     background: rgb(255, 255, 255);
     background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(255, 237, 0) 100%);
   }
-  .infopage .deco .circle_color-ctn span:nth-child(3) {
+  .stats_page .deco .circle_color-ctn span:nth-child(3) {
     background: rgb(255, 255, 255);
     background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 0%, rgb(0, 255, 49) 100%);
   }

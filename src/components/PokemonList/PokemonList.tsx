@@ -1,4 +1,4 @@
-import './pokemonlist.css'
+import './Pokemonlist.css'
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import {getPokemons} from '../../api/PokemonRepository';
@@ -23,7 +23,7 @@ function PokemonList() {
         <div className="pokemonlist-ctn">
             <div className="screen_scroll">
             {pokemons.map((pokemon) => (
-                    <Link key={pokemon.id} className='pokemon_link' to={`/info/${pokemon.id}` }>
+                    <Link key={pokemon.id} className='pokemon_link' to={`/stats/${pokemon.id}` }>
                 <img src={`${pokemon.image}`} alt="" />
                 <span>{pokemon.name}</span>
                 </Link>

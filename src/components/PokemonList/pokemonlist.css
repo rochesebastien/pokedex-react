@@ -23,17 +23,26 @@
     padding: 20px 0px;
     border: 1px solid black;
   }
+
+  .pokemon_link{
+    color: black;
+    text-decoration: none;
+  }
+
+  .pokemon_link:hover {
+    width: 80;
+    background-color: rgb(67, 111, 192);
+  }
+
   .pokemonlist-ctn .screen_scroll span {
     background-color: white;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     padding: 5px;
+    font-family: "Helvetica Neue", sans-serif;
+    text-decoration: none;
   }
   .pokemonlist-ctn .screen_scroll img {
     width: 80%;
-  }
-  .pokemonlist-ctn .screen_scroll img:hover {
-    background-color: rgb(67, 111, 192);
-    border-radius: 50%;
   }
 
   .pokemon_link{

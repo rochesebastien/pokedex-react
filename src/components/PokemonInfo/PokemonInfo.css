@@ -1,4 +1,4 @@
-.infopage .right_ctn {
+.stats_page .right_ctn {
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -10,20 +10,20 @@
     border-radius: 19px;
     margin: 0 auto;
   }
-  .infopage .pokemon-name-ctn {
+  .stats_page .pokemon-name-ctn {
     display: flex;
     align-items: center;
     padding: 30px 0px;
     width: 92%;
   }
-  .infopage .pokemon-name-ctn span {
+  .stats_page .pokemon-name-ctn span {
     color: black;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 3rem;
     font-family: "Helvetica Neue", sans-serif;
   }
-  .infopage .stats_ctn {
+  .stats_page .stats_ctn {
     padding: 30px 0px;
     width: 90%;
     margin: 0 auto;
@@ -31,7 +31,7 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  .infopage .stats_items {
+  .stats_page .stats_items {
     width: 250px;
     height: 170px;
     display: flex;
@@ -46,13 +46,13 @@
     border-radius: 19px;
     font-weight: bold;
   }
-  .infopage .stats_items .row {
+  .stats_page .stats_items .row {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-around;
   }
-  .infopage .stats_items .row img {
+  .stats_page .stats_items .row img {
     width: 48px;
     height: 48px;
   }

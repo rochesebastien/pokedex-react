@@ -1,4 +1,4 @@
-import './PokemonList.css'
+import './PokemonInfo.css'
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import {getOnePokemon} from '../../api/PokemonRepository';
@@ -16,13 +16,18 @@ function PokemonInfo(){
             setPokemon(pokemons_data) ;
         }
         getPokemonLoad ();
+        console.log(pokemon);
+        console.log(id);
+        
+        
     },[id]);
+
     return (
         <div className="right_ctn" >
                 <div className="pokemon-name-ctn">
-                    <span className="id">{pokemon.id} </span>
+                    <span className="id">{pokemon ? pokemon.id : ""} </span>
                     <span>  -  </span>
-                    <span className="name">{pokemon.name}</span>
+                    <span className="name">{pokemon ? pokemon.name : ""}</span>
                     
                 </div>
                 <div className="stats_ctn">
@@ -32,7 +37,7 @@ function PokemonInfo(){
                             <span>Atk</span>
                         </div>
                         <div className="value">
-                            <span>{pokemon ? pokemon.stats.attack : '?'}</span>
+                            <span>{pokemon.id ? pokemon.stats.attack : ""}</span>
                         </div>
                     </div>
                     <div className="stats_items">
@@ -41,7 +46,7 @@ function PokemonInfo(){
                             <span>Def</span>
                         </div>
                         <div className="value">
-                            {/* <span>{pokemon.stats.defense}</span> */}
+                            <span>{pokemon.id ? pokemon.stats.defense : ""}</span>
                         </div>
                     </div>
                     <div className="stats_items">
@@ -50,16 +55,16 @@ function PokemonInfo(){
                             <span>Spd</span>
                         </div>
                         <div className="value">
-                            {/* <span>{pokemon.stats.speed}</span> */}
+                            <span>{pokemon.id ? pokemon.stats.speed : ""}</span>
                         </div>
                     </div>
                     <div className="stats_items">
                         <div className="row">
                             <img src="/icons/Atk Spe.svg" alt=""/>
-                            {/* <span>Atk spe</span> */}
+                            <span>Atk spe</span>
                         </div>
                         <div className="value">
-                            {/* <span>{pokemon.stats.special_attack}</span> */}
+                            <span>{pokemon.id ? pokemon.stats.special_attack : ""}</span>
                         </div>
                     </div>
                     <div className="stats_items">
@@ -68,7 +73,7 @@ function PokemonInfo(){
                          <span>Def spe</span>
                         </div>
                         <div className="value">
-                            {/* <span>{pokemon.stats.special_defense}</span> */}
+                            <span>{pokemon.id ? pokemon.stats.special_defense : ""}</span>
                         </div>
                     </div>
                  </div>
