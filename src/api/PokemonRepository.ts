@@ -1,4 +1,3 @@
-import axios from "axios";
 
 const API_URL = "https://pokebuildapi.fr/api/v1"
 
@@ -28,7 +27,7 @@ export async function SearchPokemonByName(name : string) {
   try {
     const response = await fetch(`${API_URL}/pokemon/`+name);
     const data = await response.json();
-    return data
+    return data.id
   } catch (error) {
     console.error("Erreur"+error);
     return null

@@ -1,8 +1,9 @@
 import './Pokemonlist.css'
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
-import {getPokemons} from '../../api/PokemonRepository';
-
+import { getPokemons } from '../../api/PokemonRepository';
+import PokemonItemList from '../PokemonItemList/PokemonItemList';
+import { Pokemon } from '../../types/Pokemon.types';
 // async function fetchData() {
 //     const response =  fetch('https://pokebuildapi.fr/api/v1/pokemon/');
 //     const data = (await response).json();
@@ -10,28 +11,31 @@ import {getPokemons} from '../../api/PokemonRepository';
 // }
 
 function PokemonList() {
-    const [pokemons, setPokemons] = useState ([]) ;
+    const [pokemons, setPokemons] = useState([]);
 
-    useEffect (() => {
-        async function getPokemonsLoad () {
-            const pokemons = await getPokemons () ;
-            setPokemons(pokemons) ;
+    useEffect(() => {
+        async function getPokemonsLoad() {
+            const pokemons = await getPokemons();
+            setPokemons(pokemons);
         }
-        getPokemonsLoad ();
+        getPokemonsLoad();
     }, []);
     return (
         <div className="pokemonlist-ctn">
             <div className="screen_scroll">
-            {pokemons.map((pokemon) => (
-                    <Link key={pokemon.id} className='pokemon_link' to={`/stats/${pokemon.id}` }>
-                <img src={`${pokemon.image}`} alt="" />
-                <span>{pokemon.name}</span>
-                </Link>
-            ))}
+                {pokemons.map((pokemon: Pokemon) => (
+                    // <PokemonItemList
+                    //     key={pokemon.id}
+                    //     id={pokemon.id}
+                    //     name={pokemon.name}
+                    //     image={pokemon.image}
+                    // />
+                    <PokemonItemList key={pokemon.id} {...pokemon} />
+                ))}
             </div>
         </div>
     )
-    
-  }
-  
-  export default PokemonList
+
+}
+
+export default PokemonList
