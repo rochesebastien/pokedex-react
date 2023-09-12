@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { getPokemons } from '../../api/PokemonRepository';
 import PokemonItemList from '../PokemonItemList/PokemonItemList';
 import { Pokemon } from '../../types/Pokemon.types';
+import ColorsCircles from '../Deco/ColorsCircles/ColorsCircles';
 // async function fetchData() {
 //     const response =  fetch('https://pokebuildapi.fr/api/v1/pokemon/');
 //     const data = (await response).json();
@@ -33,6 +34,7 @@ function PokemonList() {
                     <PokemonItemList key={pokemon.id} {...pokemon} />
                 ))}
             </div>
+            <ColorsCircles />
         </div>
     )
 
