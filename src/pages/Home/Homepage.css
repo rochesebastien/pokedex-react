@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    width: calc(100vw - 300px);
+    width: calc(100vw - 302px);
   }
 
 
@@ -78,24 +78,35 @@
 
   .button_action_pannel{
     border-radius: 8px;
-    background: #C70202;
-    box-shadow: 2px 5px 0px 0px #600405;
+    background: #686767;
+    /* box-shadow: 2px 5px 0px 0px #636363; */
     display: flex;
     align-items: center;
     padding: 1.5rem 1.3rem;
     text-decoration: none;
+    box-shadow: 0 9px black;
   }
 
+  .button_action_pannel:hover{
+    height:calc(initial - 5px);
+    /* margin-top:5px; */
+    box-shadow: 0 4px #323031;
+  }
+
+
   .button_action_pannel span{
-    font-family: 'Handjet', cursive;
-    font-size: 2rem;
+    /* font-family: 'Handjet', cursive; */
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.5rem;
     color: white;
     text-decoration: none;
   }
 
   .button_action_pannel img{
     filter: invert(1);
-    padding: 1rem;
+    padding-right: 0.5rem
   }
 
   .btn_choices_ctn{

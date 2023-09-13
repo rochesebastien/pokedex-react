@@ -2,10 +2,10 @@ import './Search.css';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import {getPokemons,SearchPokemonByName} from '../../api/PokemonRepository';
+import { Pokemon } from '../../types/Pokemon.types';
 
 
-
-function Search() { 
+function SearchPage() { 
   const [pokemons, setPokemons] = useState ([]) ;
 
     useEffect (() => {
@@ -31,8 +31,7 @@ function Search() {
       <div className="search_page" >
         Page Searcb !
         <datalist id="data">
-        {pokemons.map((pokemon,key) => (
-
+        {pokemons.map((pokemon : Pokemon,key) => (
               <option  key={pokemon.id} value={pokemon.name}/>
           ))}
         </datalist>
@@ -44,5 +43,5 @@ function Search() {
     
   }
   
-  export default Search
+  export default SearchPage
   
