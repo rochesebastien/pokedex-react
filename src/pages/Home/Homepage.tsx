@@ -1,6 +1,7 @@
 import './Homepage.css'
 import { Link } from "react-router-dom";
 import { useState } from 'react';
+import Navbar from '../../components/Navbar/Navbar';
 
 function Homepage() {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ function Homepage() {
                     <button onClick={openPokdedex}></button>
                 </div>
             </div>
-
+            <Navbar />
             <div className="screen_control">
                 {/* Voir les pokemons de tout un type */}
                 {/* Recherchez un pokedemon par son nom*/}
@@ -54,23 +55,6 @@ function Homepage() {
                     <span>Table des types</span>
                 </Link>
             </div>
-
-
-            {/* <Link to='' className="button_action_pannel">
-                    <img src="/icons/file-list-2-line.svg" alt=""/>
-                </Link>
-                <Link to='/randomteam' className="button_action_pannel">
-                    <img src="/icons/team-line.svg" alt=""/>
-                </Link>
-                <Link to='/stats' className="button_action_pannel">
-                    <img src="/icons/information-line.svg" alt=""/>
-                </Link>
-                <Link to='/typestable' className="button_action_pannel">
-                    <img src="icons/sword-line.svg" alt=""/>
-                </Link>
-                <Link to='/search' className="button_action_pannel">
-                    <img src="/icons/search-eye-line.svg" alt=""/>
-                </Link>  */}
 
             {/* <Link to="/info">Infopage</Link>
         Homepage */}
