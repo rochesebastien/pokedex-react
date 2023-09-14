@@ -1,6 +1,10 @@
 .navbar {
     display: flex;
     gap: 1rem;
+    background: rgb(0, 255, 21);
+    width: 80%;
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
 
 .navbar a {
@@ -9,7 +13,7 @@
     align-items: center;
     text-decoration: none;
     background: grey;
-    padding: 1.2rem;
+    padding: 1.2rem 1.5rem;
 }
 
 .navbar img {
