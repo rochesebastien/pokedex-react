@@ -24,15 +24,13 @@ function PokemonList() {
     return (
         <div className="pokemonlist-ctn">
             <div className="screen_scroll">
-                {pokemons.map((pokemon: Pokemon) => (
-                    // <PokemonItemList
-                    //     key={pokemon.id}
-                    //     id={pokemon.id}
-                    //     name={pokemon.name}
-                    //     image={pokemon.image}
-                    // />
-                    <PokemonItemList key={pokemon.id} {...pokemon} />
-                ))}
+                {pokemons.length > 0 ? (
+                    pokemons.map((pokemon: Pokemon) => (
+                        <PokemonItemList key={pokemon.id} {...pokemon} />
+                    ))
+                ) : (
+                    <img id="loader" src="icons/loader.gif" alt=""/>
+                )}
             </div>
             <ColorsCircles />
         </div>

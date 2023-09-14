@@ -31,34 +31,9 @@ function Homepage() {
                 {/* Voir tous les pookemons d'une generation*/}
                 {/* Tables des faiblesses de types */}
                 {/* Génére une équipe random */}
-                Appuyez sur le bouton de votre choix !
+                <p>Bienvenue sur la version en ligne du Pokédex !</p>
+                <p>Appuyez sur le bouton de votre choix. </p>
             </div>
-            <div className="btn_choices_ctn">
-                <Link to='' className="button_action_pannel">
-                    <img src="/icons/fire-line.svg" alt="" />
-                    <span>Tous les pokémons d'un type</span>
-                </Link>
-                <Link to='/search' className="button_action_pannel">
-                    <img src="/icons/search-eye-line.svg" alt="" />
-                    <span>Rechercher par son nom</span>
-                </Link>
-                <Link to='/randomteam' className="button_action_pannel">
-                    <img src="/icons/team-line.svg" alt="" />
-                    <span>Faire une équipe aléatoire</span>
-                </Link>
-                <Link to='' className="button_action_pannel">
-                    <img src="/icons/file-list-2-line.svg" alt="" />
-                    <span>Tous les pokémons d'une génération</span>
-                </Link>
-                <Link to='/typestable' className="button_action_pannel">
-                    <img src="icons/sword-line.svg" alt="" />
-                    <span>Table des types</span>
-                </Link>
-            </div>
-
-            {/* <Link to="/info">Infopage</Link>
-        Homepage */}
-
         </div>
     )
 }
