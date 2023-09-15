@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import {getPokemons,SearchPokemonByName} from '../../api/PokemonRepository';
 import { Pokemon } from '../../types/Pokemon.types';
-
+import Navbar from '../../components/Navbar/Navbar';
 
 function SearchPage() { 
   const [pokemons, setPokemons] = useState ([]) ;
@@ -29,7 +29,7 @@ function SearchPage() {
 
     return (
       <div className="search_page" >
-        Page Searcb !
+        <Navbar />
         <datalist id="data">
         {pokemons.map((pokemon : Pokemon,key) => (
               <option  key={pokemon.id} value={pokemon.name}/>
