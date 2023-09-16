@@ -4,24 +4,26 @@ import { Link } from "react-router-dom";
 function Navbar() {
     return (
         <nav className="navbar">
-            <Link to='/' className="">
-                <img src="icons/btns/poke_home.png" alt="" />
-            </Link>
-            <Link to='' className="">
-                <img src="icons/btns/poke_by_types.png" alt="" />
-            </Link>
-            <Link to='/search' className="">
-                <img src="icons/btns/poke_search.png" alt="" />
-            </Link>
-            <Link to='/randomteam' className="">
-                <img src="icons/btns/poke_random_team.png" alt="" />
-            </Link>
-            <Link to='' className="">
-                <img src="icons/btns/poke_by_gen.png" alt="" />
-            </Link>
-            <Link to='/typestable' className="">
-                <img src="icons/btns/poke_table_types.png" alt="" />
-            </Link>
+            <div className="nav_ctn">
+            <div className="nav_logo_ctn">
+                <img src="icon.png" alt="Pokédex" className="nav_logo" />
+            </div>
+            <ul className="nav_links_ctn">
+                <li className="nav_link"><Link to="/">Accueil</Link></li>
+                <li className="nav_link"><Link to="/about">Les Pokémons</Link></li>
+                <li className="nav_link"><Link to="/contact">Votre équipe</Link></li>
+                <li className="nav_link"><Link to="/contact">Table des types</Link></li>
+            </ul>
+            <div className="nav_mode_switch_ctn">
+                <span className="on">On</span>
+                <span className="">Off</span>
+            </div>
+            <div className="nav_info_ctn">
+                <span>Github Project</span>
+                <span>See my Portfolio</span>
+                <span>API used</span>
+            </div>   
+            </div>
         </nav>
     )
 }

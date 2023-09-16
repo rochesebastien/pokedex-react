@@ -1,7 +1,5 @@
 .App{
+    width: 100vw;
+    height: 100vh;
     display: flex;
 }
-
-.hide {
-    display: none !important;
-  }

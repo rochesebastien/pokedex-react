@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Handjet&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
-
+/* font-family: 'Handjet', cursive; */
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #F04B4B;
+  background: linear-gradient(160deg, red, rgba(0, 0, 0, 0.859));
   display: flex;
   flex-wrap: wrap;
 }

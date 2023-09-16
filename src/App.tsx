@@ -12,13 +12,13 @@ import Search from './pages/Search/Search';
 import RandomTeam from './pages/RandomTeam/RandomTeam';
 import TypesTable from './pages/TypesTable/TypesTable';
 
-import PokemonList from './components/PokemonList/PokemonList';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
 
   return (
     <div className="App">
-        <PokemonList />
+        <Navbar/>
           <Routes>
             <Route path="" element={<Homepage />} />
             <Route path="/stats/:id" element={<Stats />} />
