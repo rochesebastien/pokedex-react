@@ -15,8 +15,8 @@ function Navbar() {
                 <li className="nav_link"><Link to="/contact">Table des types</Link></li>
             </ul>
             <div className="nav_mode_switch_ctn">
-                <span className="on">On</span>
-                <span className="">Off</span>
+                <span className="">On</span>
+                <span className="on">Off</span>
             </div>
             <div className="nav_info_ctn">
                 <span>Github Project</span>

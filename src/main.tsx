@@ -21,15 +21,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
       <Navbar />
       <App />
-      {/* <Routes>
-            <Route path="" element={<Homepage />} />
-            <Route path="/stats/:id" element={<Stats />} />
-            <Route path="/home" element={<Homepage />} />
-            <Route path="/stats" element={<Stats />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/randomteam" element={<RandomTeam />} />
-            <Route path="/typestable" element={<TypesTable />} />
-          </Routes> */}
     </React.StrictMode>
   </BrowserRouter>,
 )
