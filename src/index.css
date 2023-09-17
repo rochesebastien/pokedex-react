@@ -9,7 +9,13 @@
 
 body {
   background: linear-gradient(160deg, red, rgba(0, 0, 0, 0.859));
-  display: flex;
   flex-wrap: wrap;
+  display: flex;
+}
+
+#root{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
 }
 
