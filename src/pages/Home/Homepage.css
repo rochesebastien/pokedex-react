@@ -1,31 +1,84 @@
+.homepage {
+    display: flex;
+    flex-direction: column;
+}
+
 .homepage h1 {
     font-family: 'Rubik', cursive;
     color: white;
-    background-color: blue;
+    /* background-color: blue; */
     padding: 2rem;
+    font-size: 3rem;
 }
 
 .expli_wrap {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-end;
     gap: 2rem;
-    background-color: orange;
-    padding: 3rem;
-    /* height: 100% */
+    /* background-color: orange; */
+    padding: 0px 3rem 3rem 3rem;
     flex-grow: 1;
+    justify-content: center;
 }
 
 .expli_el {
-    max-width: 400px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.36);
     background: rgba(255, 255, 255, 0.49);
     backdrop-filter: blur(11.399999618530273px);
+    padding: 2rem;
+    height: 200px;
+    transition: 0.1s ease-in;
+}
+.expli_el img {
+   width: 64px;
+   padding: 0.7rem 0px;
+   filter: invert(1);
 }
 
-.expli_el h3{
+.expli_el h3 {
     font-family: "Rubik", cursive;
+    /* color: white; */
+    color: black;
+}
+
+.expli_el p {
+    font-family: 'Rubik', cursive;
+    /* color: white;*/
+    color: black; 
+    padding: 0px 1px;
+}
+
+.expli_el:hover {
+    background: rgba( 0, 0, 0, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.expli_el:hover img{
+    filter: invert(0);
+}
+
+.expli_el:hover p{
     color: white;
+}
+
+.expli_el:hover h3{
+    color: white;
+}
+
+#homepage_pokemon{
+    position: absolute;
+    bottom: -5%;
+    right: -5%;
+    width: 500px;
+    height: 500px;
+    z-index: -1;
 }

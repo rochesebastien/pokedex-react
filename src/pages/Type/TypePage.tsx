@@ -1,11 +1,12 @@
 
-import './TypesTable.css'
+import './TypePage.css'
 
 
 
-function TypesTable() { 
+function TypePage(props : any) { 
     return (
       <div className="typestable_page">
+        <h1>{props.title}</h1>
         <div className='typestable_ctn'>
         <img id="tabletype" src="/typestable.png" alt="" />
 
@@ -14,5 +15,5 @@ function TypesTable() {
     )
   }
   
-  export default TypesTable
+  export default TypePage
   

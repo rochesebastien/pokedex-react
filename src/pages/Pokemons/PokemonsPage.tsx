@@ -1,11 +1,11 @@
-import './Search.css';
+import './PokemonsPage.css';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import {getPokemons,SearchPokemonByName} from '../../api/PokemonRepository';
 import { Pokemon } from '../../types/Pokemon.types';
 import Navbar from '../../components/Navbar/Navbar';
 
-function SearchPage() { 
+function PokemonsPage(props : any) { 
   const [pokemons, setPokemons] = useState ([]) ;
 
     useEffect (() => {
@@ -29,7 +29,7 @@ function SearchPage() {
 
     return (
       <div className="search_page" >
-        <Navbar />
+        <h1>{props.title}</h1>
         <datalist id="data">
         {pokemons.map((pokemon : Pokemon,key) => (
               <option  key={pokemon.id} value={pokemon.name}/>
@@ -43,5 +43,5 @@ function SearchPage() {
     
   }
   
-  export default SearchPage
+  export default PokemonsPage
   

@@ -10,9 +10,9 @@ import {
 
 import Homepage from './pages/Home/Homepage';
 import Stats from './pages/Stats/Stats';
-import Search from './pages/Search/Search';
+import Search from './pages/Pokemons/PokemonsPage';
 import RandomTeam from './pages/RandomTeam/RandomTeam';
-import TypesTable from './pages/TypesTable/TypesTable';
+import TypesTable from './pages/Type/TypePage';
 
 import Navbar from './components/Navbar/Navbar';
 

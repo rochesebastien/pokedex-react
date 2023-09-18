@@ -10,9 +10,9 @@ function Navbar() {
             </div>
             <ul className="nav_links_ctn">
                 <li className="nav_link"><Link to="/">Accueil</Link></li>
-                <li className="nav_link"><Link to="/about">Les Pokémons</Link></li>
-                <li className="nav_link"><Link to="/contact">Votre équipe</Link></li>
-                <li className="nav_link"><Link to="/contact">Table des types</Link></li>
+                <li className="nav_link"><Link to="/pokemons">Les Pokémons</Link></li>
+                <li className="nav_link"><Link to="/teams">Votre équipe</Link></li>
+                <li className="nav_link"><Link to="/types">Table des types</Link></li>
             </ul>
             <div className="nav_mode_switch_ctn">
                 <span className="">On</span>

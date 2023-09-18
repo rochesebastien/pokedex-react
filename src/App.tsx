@@ -9,10 +9,8 @@ import {
 
 
 import Homepage from './pages/Home/Homepage';
-import Stats from './pages/Stats/Stats';
-import Search from './pages/Search/Search';
-import RandomTeam from './pages/RandomTeam/RandomTeam';
-import TypesTable from './pages/TypesTable/TypesTable';
+import PokemonsPage from './pages/Pokemons/PokemonsPage';
+import TypePage from './pages/Type/TypePage';
 
 import Navbar from './components/Navbar/Navbar';
 
@@ -22,12 +20,10 @@ function App() {
     <div className="App">
             <Routes>
             <Route path="" element={<Homepage title="Écran d'accueil" />} />
-            <Route path="/stats/:id" element={<Stats />} />
-            <Route path="/home" element={<Homepage title="Home"/>} />
-            <Route path="/stats" element={<Stats />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="/randomteam" element={<RandomTeam />} />
-            <Route path="/typestable" element={<TypesTable />} />
+            <Route path="/home" element={<Homepage title="Écran d'accueil" />} />
+            <Route path="/pokemons" element={<PokemonsPage title="Trouvez vos pokémons" />} />
+            {/* <Route path="/team" element={<RandomTeam />} /> */}
+            <Route path="/types" element={<TypePage title="Voir les types" />} />
           </Routes>
     </div>
   )
