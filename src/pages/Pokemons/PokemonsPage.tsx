@@ -6,37 +6,24 @@ import { Pokemon } from '../../types/Pokemon.types';
 import Navbar from '../../components/Navbar/Navbar';
 
 function PokemonsPage(props : any) { 
-  const [pokemons, setPokemons] = useState ([]) ;
+  // const [pokemons, setPokemons] = useState ([]) ;
 
-    useEffect (() => {
-        async function getPokemonsLoad () {
-            const pokemons = await getPokemons () ;
-            setPokemons(pokemons) ;
-        }
-        getPokemonsLoad ();
-    }, []);
-
-    async function ClickButtonSearch() {
-      const input = document.querySelector('#InputSearch') as HTMLInputElement;
-      console.log(input.value);
-      const test = await SearchPokemonByName(input.value);
-      console.log('You clicked submit.');
-      console.log(test);
-      const navigate = useNavigate();
-      navigate('/stats');
-    }
+  //   useEffect (() => {
+  //       async function getPokemonsLoad () {
+  //           const pokemons = await getPokemons () ;
+  //           setPokemons(pokemons) ;
+  //       }
+  //       getPokemonsLoad ();
+  //   }, []);
     
 
     return (
-      <div className="search_page" >
-        <h1>{props.title}</h1>
-        <datalist id="data">
-        {pokemons.map((pokemon : Pokemon,key) => (
-              <option  key={pokemon.id} value={pokemon.name}/>
-          ))}
-        </datalist>
-        <input name="" id="InputSearch" autoComplete='off' placeholder="Rechercher le nom d'un pokemon" list="data" />
-        <button onClick={ClickButtonSearch}>Rechercher</button>
+      <div className="pokemons_page" >
+        <div className="title">
+            <h1>{props.title}</h1>
+            <input type="search" name="pokemon_search" id="" placeholder='Rechercher votre pokémon'/>
+        </div>
+
       </div>
     )
 

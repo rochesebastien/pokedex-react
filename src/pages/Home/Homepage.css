@@ -17,13 +17,15 @@
     align-items: flex-end;
     gap: 2rem;
     /* background-color: orange; */
-    padding: 0px 3rem 3rem 3rem;
+    /* padding: 0px 3rem 3rem 3rem; */
+    padding-bottom: 2rem;
     flex-grow: 1;
     justify-content: center;
+    width: 100%;
 }
 
 .expli_el {
-    max-width: 500px;
+    max-width: 435px;
     display: flex;
     flex-direction: column;
     border-radius: 12px;
