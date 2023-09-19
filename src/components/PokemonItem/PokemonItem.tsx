@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { Pokemon } from '../../types/Pokemon.types';
+import './PokemonItem.css';
 
-function PokemonItemList(props : Pokemon) {
-    const [loading, setLoading] = useState(true);
+function PokemonItem(props : Pokemon) {
     return (
 
-        <Link key={props.id} className='pokemon_link' to={`/stats/${props.id}`}>
+        <div key={props.id} className='pokemons_item'>
             <img src={`${props.image}`} alt="" />
             <span>{props.name}</span>
-        </Link>
+        </div>
     )
 
 }
 
-export default PokemonItemList
+export default PokemonItem

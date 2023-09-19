@@ -2,7 +2,7 @@ import './Pokemonlist.css'
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import { getPokemons } from '../../api/PokemonRepository';
-import PokemonItemList from '../PokemonItemList/PokemonItemList';
+import PokemonItem from '../PokemonItem/PokemonItem';
 import { Pokemon } from '../../types/Pokemon.types';
 import ColorsCircles from '../Deco/ColorsCircles/ColorsCircles';
 // async function fetchData() {
@@ -12,29 +12,29 @@ import ColorsCircles from '../Deco/ColorsCircles/ColorsCircles';
 // }
 
 function PokemonList() {
-    const [pokemons, setPokemons] = useState([]);
+    // const [pokemons, setPokemons] = useState([]);
 
-    useEffect(() => {
-        async function getPokemonsLoad() {
-            const pokemons = await getPokemons();
-            setPokemons(pokemons);
-        }
-        getPokemonsLoad();
-    }, []);
-    return (
-        <div className="pokemonlist-ctn">
-            <div className="screen_scroll">
-                {pokemons.length > 0 ? (
-                    pokemons.map((pokemon: Pokemon) => (
-                        <PokemonItemList key={pokemon.id} {...pokemon} />
-                    ))
-                ) : (
-                    <img id="loader" src="icons/loader.gif" alt=""/>
-                )}
-            </div>
-            <ColorsCircles />
-        </div>
-    )
+    // useEffect(() => {
+    //     async function getPokemonsLoad() {
+    //         const pokemons = await getPokemons();
+    //         setPokemons(pokemons);
+    //     }
+    //     getPokemonsLoad();
+    // }, []);
+    // return (
+    //     <div className="pokemonlist-ctn">
+    //         <div className="screen_scroll">
+    //             {pokemons.length > 0 ? (
+    //                 pokemons.map((pokemon: Pokemon) => (
+    //                     <PokemonItem key={pokemon.id} {...pokemon} />
+    //                 ))
+    //             ) : (
+    //                 <img id="loader" src="icons/loader.gif" alt=""/>
+    //             )}
+    //         </div>
+    //         <ColorsCircles />
+    //     </div>
+    // )
 
 }
 
