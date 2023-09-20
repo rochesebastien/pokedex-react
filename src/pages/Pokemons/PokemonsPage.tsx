@@ -6,6 +6,7 @@ import { Pokemon } from '../../types/Pokemon.types';
 import Navbar from '../../components/Navbar/Navbar';
 import PokemonItem from '../../components/PokemonItem/PokemonItem';
 
+
 function PokemonsPage(props: any) {
   const [pokemons, setPokemons] = useState([]);
 
@@ -25,7 +26,7 @@ function PokemonsPage(props: any) {
         <input type="search" name="pokemon_search" id="" placeholder='Rechercher votre pokémon' />
       </div>
       <div className="pokemons_list_ctn">
-        {pokemons.length > 0 ? (
+      {pokemons.length > 0 ? (
           pokemons.map((pokemon: Pokemon) => (
             <PokemonItem key={pokemon.id} {...pokemon} />
           ))
