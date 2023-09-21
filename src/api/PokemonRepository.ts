@@ -23,11 +23,11 @@ export async function getOnePokemon(id : number) {
     }
 }
 
-export async function SearchPokemonByName(name : string) {
+export async function getPokemonTypes() {
   try {
-    const response = await fetch(`${API_URL}/pokemon/`+name);
+    const response = await fetch(`${API_URL}/types/`);
     const data = await response.json();
-    return data.id
+    return data
   } catch (error) {
     console.error("Erreur"+error);
     return null

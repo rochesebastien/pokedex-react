@@ -2,7 +2,7 @@ import './Pokemonlist.css'
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from 'react';
 import { getPokemons } from '../../api/PokemonRepository';
-import PokemonItem from '../PokemonItem/PokemonItem';
+import PokemonItem from '../Pokemons/PokemonItem/PokemonItem';
 import { Pokemon } from '../../types/Pokemon.types';
 import ColorsCircles from '../Deco/ColorsCircles/ColorsCircles';
 // async function fetchData() {

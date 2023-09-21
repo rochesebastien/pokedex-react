@@ -1,22 +1,21 @@
 import './PokemonsPage.css';
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from "react-router-dom";
-import { getPokemons, SearchPokemonByName } from '../../api/PokemonRepository';
+import { getPokemons } from '../../api/PokemonRepository';
 import { Pokemon } from '../../types/Pokemon.types';
-import Navbar from '../../components/Navbar/Navbar';
-import PokemonItem from '../../components/PokemonItem/PokemonItem';
-
+import PokemonItem from '../../components/Pokemons/PokemonItem/PokemonItem';
+import PokemonTypesList from '../../components/Pokemons/PokemonTypesList/PokemonTypesList';
 
 function PokemonsPage(props: any) {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
-  // const SearchPokemon = (event : React.KeyboardEvent<HTMLInputElement>)=>{
+  const [inputValue, setInputValue] = useState<string>("");
+  const [pokemons_save, setPokemonsSave] = useState<Pokemon[]>([]);
 
-  //   setPokemons(pokemons.filter((pokemon: Pokemon) => pokemon.name.includes(event.key)))
-  // }
 
-  const test = (event : React.KeyboardEvent<HTMLInputElement>)=>{
-    if (/^[a-z-]$/.test(event.key)) {
-      alert(event.key)
+  const SearchPokemon = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(event.target.value)
+    setPokemons(pokemons_save)
+    if (event.target.value != "") {
+      setPokemons(pokemons.filter((pokemon: Pokemon) => pokemon.name.toLowerCase().includes(event.target.value.toLowerCase())))
     }
   }
 
@@ -25,6 +24,7 @@ function PokemonsPage(props: any) {
     async function getPokemonsLoad() {
       const pokemons = await getPokemons();
       setPokemons(pokemons);
+      setPokemonsSave(pokemons);
     }
     getPokemonsLoad();
   }, []);
@@ -34,10 +34,11 @@ function PokemonsPage(props: any) {
     <div className="pokemons_page" >
       <div className="title">
         <h1>{props.title}</h1>
-        <input type="search" name="pokemon_search" id="" placeholder='Rechercher votre pokémon' onKeyUp={test}/>
+        <input type="search" name="pokemon_search" id="" placeholder='Rechercher...' onChange={SearchPokemon} value={inputValue} />
       </div>
+      <PokemonTypesList />
       <div className="pokemons_list_ctn">
-      {pokemons.length > 0 ? (
+        {pokemons.length > 0 ? (
           pokemons.map((pokemon: Pokemon) => (
             <PokemonItem key={pokemon.id} {...pokemon} />
           ))

@@ -15,8 +15,10 @@ export type Pokemon = {
 }
 
 export type PokemonType = {
+    id : number,
     name : string,
     image : string
+    englishName : string
 }
 
 export type PokemonEvolution = {

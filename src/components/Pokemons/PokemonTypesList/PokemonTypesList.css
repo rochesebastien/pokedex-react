@@ -1,0 +1,11 @@
+.pokemons_types_list{
+    /* background-color: blue; */
+    display: flex;
+    gap: 0.3rem;
+    padding: 1.2rem;
+    justify-content: center;
+    align-items: center;
+}
+.pokemons_types_list img{
+    width: 48px;
+}
