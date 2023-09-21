@@ -8,7 +8,18 @@ import PokemonItem from '../../components/PokemonItem/PokemonItem';
 
 
 function PokemonsPage(props: any) {
-  const [pokemons, setPokemons] = useState([]);
+  const [pokemons, setPokemons] = useState<Pokemon[]>([]);
+  // const SearchPokemon = (event : React.KeyboardEvent<HTMLInputElement>)=>{
+
+  //   setPokemons(pokemons.filter((pokemon: Pokemon) => pokemon.name.includes(event.key)))
+  // }
+
+  const test = (event : React.KeyboardEvent<HTMLInputElement>)=>{
+    if (/^[a-z-]$/.test(event.key)) {
+      alert(event.key)
+    }
+  }
+
 
   useEffect(() => {
     async function getPokemonsLoad() {
@@ -23,7 +34,7 @@ function PokemonsPage(props: any) {
     <div className="pokemons_page" >
       <div className="title">
         <h1>{props.title}</h1>
-        <input type="search" name="pokemon_search" id="" placeholder='Rechercher votre pokémon' />
+        <input type="search" name="pokemon_search" id="" placeholder='Rechercher votre pokémon' onKeyUp={test}/>
       </div>
       <div className="pokemons_list_ctn">
       {pokemons.length > 0 ? (
