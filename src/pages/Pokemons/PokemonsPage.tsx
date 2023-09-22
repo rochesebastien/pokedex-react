@@ -1,14 +1,17 @@
 import './PokemonsPage.css';
 import React, { useState, useEffect } from 'react';
 import { getPokemons } from '../../api/PokemonRepository';
-import { Pokemon } from '../../types/Pokemon.types';
 import PokemonItem from '../../components/Pokemons/PokemonItem/PokemonItem';
 import PokemonTypesList from '../../components/Pokemons/PokemonTypesList/PokemonTypesList';
+
+import { PokemonType } from '../../types/Pokemon.types';
+import { Pokemon } from '../../types/Pokemon.types';
 
 function PokemonsPage(props: any) {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
   const [inputValue, setInputValue] = useState<string>("");
   const [pokemons_save, setPokemonsSave] = useState<Pokemon[]>([]);
+  const [types, setTypes] = useState<PokemonType[]>([]);
 
 
   const SearchPokemon = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,6 +21,20 @@ function PokemonsPage(props: any) {
       setPokemons(pokemons.filter((pokemon: Pokemon) => pokemon.name.toLowerCase().includes(event.target.value.toLowerCase())))
     }
   }
+
+  const handleTypesSelection = (types: PokemonType[]) => {
+    setTypes(types);
+    setPokemons(
+      pokemons.filter((pokemon: Pokemon) =>
+        types.every
+      )
+    )
+    pokemons.forEach((pokemon: Pokemon) => {
+      console.log(pokemon.apiTypes);
+    })
+    
+    
+  };
 
 
   useEffect(() => {
@@ -36,7 +53,7 @@ function PokemonsPage(props: any) {
         <h1>{props.title}</h1>
         <input type="search" name="pokemon_search" id="" placeholder='Rechercher...' onChange={SearchPokemon} value={inputValue} />
       </div>
-      <PokemonTypesList />
+      <PokemonTypesList typesSelected={handleTypesSelection}  />
       <div className="pokemons_list_ctn">
         {pokemons.length > 0 ? (
           pokemons.map((pokemon: Pokemon) => (
