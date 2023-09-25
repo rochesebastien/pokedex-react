@@ -11,7 +11,7 @@ function PokemonsPage(props: any) {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
   const [inputValue, setInputValue] = useState<string>("");
   const [pokemons_save, setPokemonsSave] = useState<Pokemon[]>([]);
-  const [types, setTypes] = useState<PokemonType[]>([]);
+  const [type, setType] = useState<PokemonType>();
 
 
   const SearchPokemon = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,24 +22,25 @@ function PokemonsPage(props: any) {
     }
   }
 
-  const handleTypesSelection = (types: PokemonType[]) => {
-    setTypes(types);
-    setPokemons(
-      pokemons.filter((pokemon: Pokemon) =>
-        types.every
+  const handleTypesSelection = (type: PokemonType) => {
+    // setType(type);
+    console.log("Type selectionné : ", type);
+    
+    const test = pokemons.filter((pokemon: Pokemon) =>
+      pokemon.apiTypes.some((pokemonType: PokemonType) =>
+        pokemonType.name === type.name   
       )
     )
-    pokemons.forEach((pokemon: Pokemon) => {
-      console.log(pokemon.apiTypes);
-    })
-    
-    
-  };
+    // setPokemons(
+    //   )
+    console.log(test);
+
+  }
 
 
   useEffect(() => {
     async function getPokemonsLoad() {
-      const pokemons = await getPokemons();
+      const pokemons: Pokemon[] = await getPokemons();
       setPokemons(pokemons);
       setPokemonsSave(pokemons);
     }
@@ -53,7 +54,7 @@ function PokemonsPage(props: any) {
         <h1>{props.title}</h1>
         <input type="search" name="pokemon_search" id="" placeholder='Rechercher...' onChange={SearchPokemon} value={inputValue} />
       </div>
-      <PokemonTypesList typesSelected={handleTypesSelection}  />
+      <PokemonTypesList typesSelected={handleTypesSelection} />
       <div className="pokemons_list_ctn">
         {pokemons.length > 0 ? (
           pokemons.map((pokemon: Pokemon) => (
