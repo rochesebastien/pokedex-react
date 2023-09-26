@@ -1,0 +1,14 @@
+.pokemon_info_ctn {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 75%;
+    height: 85%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 38px;
+    border: 2px solid rgba(216, 216, 216, 0.622);
+    box-shadow: 8px 24px 75px 9px rgba(0, 0, 0, 0.63);
+    background: #c702023f;
+}
