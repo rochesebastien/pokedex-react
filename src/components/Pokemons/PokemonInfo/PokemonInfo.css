@@ -10,5 +10,101 @@
     border-radius: 38px;
     border: 2px solid rgba(216, 216, 216, 0.622);
     box-shadow: 8px 24px 75px 9px rgba(0, 0, 0, 0.63);
-    background: #c702023f;
+    background: #b19696a2;
+    overflow: hidden;
+}
+
+.pokemon_info_ctn {
+    padding: 2rem 1.2rem;
+}
+
+.pokemon_info_ctn .title_ctn {
+    color: #FFF;
+    font-family: "Rubik";
+    font-size: 3rem;
+}
+
+.pokemon_info_ctn .close_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 23px;
+    background: #C70202;
+    padding: 1.5rem;
+    width: 32px;
+    height: 32px;
+    border: none;
+    font-family: "Rubik";
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    box-shadow: 0px 1.25px 0px 0px #600405;
+    transition: 0.2s ease-in;
+}
+
+.pokemon_info_ctn .close_btn:hover {
+    top: calc(2rem + 1.25px);
+    background-color: #751111;
+    color: white;
+    box-shadow: 0px 0px 0px 0px;
+}
+
+.pokemon_info_stats {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.pokemon_info_stats li {
+    width: 100%;
+}
+
+.stats_item {
+    width: 60%;
+    display: flex;
+    border-radius: 0px 10px 10px 0px;
+    background: rgba(96, 4, 5, 0.56);
+    box-shadow: 4px 6px 12px 2px rgba(0, 0, 0, 0.72);
+    font-family: "Rubik";
+    font-size: 47px;
+    color: white;
+    font-weight: bold;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.stats_item .filled {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0.5rem;
+    border-radius: 0px 10px 10px 0px;
+    background: rgba(199, 2, 2, 0.37);
+}
+
+
+.stats_item .filled img {
+    width: 48px;
+    height: 48px;
+}
+
+#pokemon_info_img{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    transform: scale(1.5);
+    z-index: -1;
+}
+
+#pokemon_info_id{
+    text-align: center;
+    font-family: "Rubik";
+    font-size: 317px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 5px #110303;
 }
