@@ -14,6 +14,7 @@ function PokemonsPage(props: any) {
   const [inputValue, setInputValue] = useState<string>("");
   const [pokemons_save, setPokemonsSave] = useState<Pokemon[]>([]);
   const [type, setType] = useState<PokemonType>();
+  const [pokemonSelected, setPokemonSelected] = useState<Pokemon>();
 
 
   const SearchPokemon = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,16 +28,18 @@ function PokemonsPage(props: any) {
   const handleTypesSelection = (type: PokemonType) => {
     // setType(type);
     console.log("Type selectionné : ", type);
-    
+
     const test = pokemons.filter((pokemon: Pokemon) =>
       pokemon.apiTypes.some((pokemonType: PokemonType) =>
-        pokemonType.name === type.name   
+        pokemonType.name === type.name
       )
     )
     // setPokemons(
     //   )
-    console.log(test);
+  }
 
+  const handlePokemonSelection = (pokemon: Pokemon) => {
+    setPokemonSelected(pokemon);
   }
 
 
@@ -52,7 +55,7 @@ function PokemonsPage(props: any) {
 
   return (
     <div className="pokemons_page" >
-      <PokemonInfo />
+      <PokemonInfo {...pokemonSelected} />
       <div className="title">
         <h1>{props.title}</h1>
         <input type="search" name="pokemon_search" id="" placeholder='Rechercher...' onChange={SearchPokemon} value={inputValue} />
@@ -61,7 +64,7 @@ function PokemonsPage(props: any) {
       <div className="pokemons_list_ctn">
         {pokemons.length > 0 ? (
           pokemons.map((pokemon: Pokemon) => (
-            <PokemonItem key={pokemon.id} {...pokemon} />
+            <PokemonItem onClick={() => handlePokemonSelection(pokemon)} key={pokemon.id} {...pokemon}  />
           ))
         ) : (
           <img id="loader" src="icons/loader.gif" alt="" />

@@ -2,7 +2,7 @@
     position: absolute;
     z-index: 1;
     display: block;
-    width: 75%;
+    width: 80%;
     height: 85%;
     top: 50%;
     left: 50%;
@@ -10,7 +10,7 @@
     border-radius: 38px;
     border: 2px solid rgba(216, 216, 216, 0.622);
     box-shadow: 8px 24px 75px 9px rgba(0, 0, 0, 0.63);
-    background: #b19696a2;
+    background: #9c0101;
     overflow: hidden;
 }
 
@@ -22,6 +22,7 @@
     color: #FFF;
     font-family: "Rubik";
     font-size: 3rem;
+    padding: 2rem 0px;
 }
 
 .pokemon_info_ctn .close_btn {
@@ -56,6 +57,7 @@
     display: flex;
     flex-direction: column;
     gap: 19px;
+    padding-left: 1.8rem;
 }
 
 .pokemon_info_stats li {
@@ -66,11 +68,11 @@
     width: 60%;
     display: flex;
     border-radius: 0px 10px 10px 0px;
-    background: rgba(96, 4, 5, 0.56);
+    background: rgb(255, 255, 255);
     box-shadow: 4px 6px 12px 2px rgba(0, 0, 0, 0.72);
     font-family: "Rubik";
     font-size: 47px;
-    color: white;
+    color: red;
     font-weight: bold;
     border-radius: 0px 10px 10px 0px;
 }
@@ -78,9 +80,10 @@
 .stats_item .filled {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0px 0.5rem;
     border-radius: 0px 10px 10px 0px;
-    background: rgba(199, 2, 2, 0.37);
+    background: #E0E0E0;
 }
 
 
@@ -106,5 +109,7 @@
     line-height: normal;
     text-transform: uppercase;
     color: transparent;
-    -webkit-text-stroke: 5px #110303;
+    -webkit-text-stroke: 5px #ffffff83;
+    position: absolute;
+    bottom: -7rem;
 }
