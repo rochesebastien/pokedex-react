@@ -25,3 +25,8 @@ export type PokemonEvolution = {
     name : string,
     id : number
 }
+
+export type PokemonCell= {
+    pokemon: Pokemon,
+    selected: Function,
+}

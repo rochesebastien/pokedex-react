@@ -10,8 +10,8 @@ function PokemonInfo(props: any) {
     const attackspe = 109 / 252 * 100;
     const defspe = 85 / 252 * 100;
     const speed = 100 / 252 * 100;
-    console.log(props);
-    console.log(pokemon_info);
+    // console.log(props);
+    // console.log(pokemon_info);
 
 
     const handlePokemonSelection = () => {
@@ -24,7 +24,7 @@ function PokemonInfo(props: any) {
                 <div className="title_ctn">
                     <h1>Dracaufeu</h1>
                 </div>
-                <button className='close_btn' onClick={() => handlePokemonSelection(pokemon)}>X</button>
+                {/* <button className='close_btn' onClick={() => handlePokemonSelection(pokemon)}>X</button> */}
                 <ul className="pokemon_info_stats">
                     <li>
                         <div className="stats_item">

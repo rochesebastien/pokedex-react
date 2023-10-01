@@ -39,7 +39,7 @@ function PokemonsPage(props: any) {
   }
 
   const handlePokemonSelection = (pokemon: Pokemon) => {
-    setPokemonSelected(pokemon);
+    alert("OUI PTN" + pokemon.id)
   }
 
 
@@ -64,7 +64,7 @@ function PokemonsPage(props: any) {
       <div className="pokemons_list_ctn">
         {pokemons.length > 0 ? (
           pokemons.map((pokemon: Pokemon) => (
-            <PokemonItem onClick={() => handlePokemonSelection(pokemon)} key={pokemon.id} {...pokemon}  />
+            <PokemonItem selected={handlePokemonSelection} key={pokemon.id} pokemon={pokemon} />
           ))
         ) : (
           <img id="loader" src="icons/loader.gif" alt="" />
