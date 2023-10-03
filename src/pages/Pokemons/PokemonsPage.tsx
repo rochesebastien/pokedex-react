@@ -39,7 +39,7 @@ function PokemonsPage(props: any) {
   }
 
   const handlePokemonSelection = (pokemon: Pokemon) => {
-    alert("OUI PTN" + pokemon.id)
+    setPokemonSelected(pokemon);
   }
 
 
@@ -55,7 +55,7 @@ function PokemonsPage(props: any) {
 
   return (
     <div className="pokemons_page" >
-      <PokemonInfo {...pokemonSelected} />
+      <PokemonInfo pokemon={pokemonSelected} />
       <div className="title">
         <h1>{props.title}</h1>
         <input type="search" name="pokemon_search" id="" placeholder='Rechercher...' onChange={SearchPokemon} value={inputValue} />

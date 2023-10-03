@@ -4,14 +4,13 @@ import './PokemonInfo.css';
 
 function PokemonInfo(props: any) {
     const [pokemon_info, setPokemonInfo] = useState<Pokemon | null>(null);
-    const health = 78 / 252 * 100;
-    const attack = 84 / 252 * 100;
-    const def = 78 / 252 * 100;
-    const attackspe = 109 / 252 * 100;
-    const defspe = 85 / 252 * 100;
-    const speed = 100 / 252 * 100;
-    // console.log(props);
-    // console.log(pokemon_info);
+
+    useEffect(() => {
+        if (props.pokemon) {
+            setPokemonInfo(props.pokemon);
+        }
+    }
+        , [props.pokemon])
 
 
     const handlePokemonSelection = () => {
@@ -22,61 +21,61 @@ function PokemonInfo(props: any) {
         pokemon_info ? (
             <div className="pokemon_info_ctn">
                 <div className="title_ctn">
-                    <h1>Dracaufeu</h1>
+                    <h1>{pokemon_info.name}</h1>
                 </div>
-                {/* <button className='close_btn' onClick={() => handlePokemonSelection(pokemon)}>X</button> */}
+                <button className='close_btn' onClick={() => handlePokemonSelection()}>X</button>
                 <ul className="pokemon_info_stats">
                     <li>
                         <div className="stats_item">
-                            <div className="filled" style={{ width: health + "%" }}>
+                            <div className="filled" style={{ width: pokemon_info.stats.HP / 252 * 100 + "%" }}>
                                 <img src="/icons/heart.svg" alt="" />
-                                <span>78</span>
+                                <span>{pokemon_info.stats.HP}</span>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div className="stats_item">
-                            <div className="filled" style={{ width: attack + "%" }}>
+                            <div className="filled" style={{ width: pokemon_info.stats.attack / 252 * 100 + "%" }}>
                                 <img src="/icons/Atk.svg" alt="" />
-                                <span>84</span>
+                                <span>{pokemon_info.stats.attack}</span>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div className="stats_item">
-                            <div className="filled" style={{ width: def + "%" }}>
+                            <div className="filled" style={{ width: pokemon_info.stats.defense + "%" }}>
                                 <img src="/icons/Def.svg" alt="" />
-                                <span>78</span>
+                                <span>{pokemon_info.stats.defense}</span>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div className="stats_item">
-                            <div className="filled" style={{ width: attackspe + "%" }}>
+                            <div className="filled" style={{ width: pokemon_info.stats.special_attack / 252 * 100 + "%" }}>
                                 <img src="/icons/Atk Spe.svg" alt="" />
-                                <span>109</span>
+                                <span>{pokemon_info.stats.special_attack}</span>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div className="stats_item">
-                            <div className="filled" style={{ width: defspe + "%" }}>
+                            <div className="filled" style={{ width: pokemon_info.stats.special_defense / 252 * 100 + "%" }}>
                                 <img src="/icons/Def Spe.svg" alt="" />
-                                <span>85</span>
+                                <span>{pokemon_info.stats.special_defense}</span>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div className="stats_item">
-                            <div className="filled" style={{ width: speed + "%" }}>
+                            <div className="filled" style={{ width: pokemon_info.stats.speed / 252 * 100 + "%" }}>
                                 <img src="/icons/Spd.svg" alt="" />
-                                <span>100</span>
+                                <span>{pokemon_info.stats.speed}</span>
                             </div>
                         </div>
                     </li>
                 </ul>
-                <img src="/images/dracaufeu.png" id="pokemon_info_img" />
-                <span id="pokemon_info_id">336</span>
+                <img src={`${pokemon_info.image}`} id="pokemon_info_img" />
+                <span id="pokemon_info_id">{pokemon_info.id}</span>
             </div>
         ) : null
     );

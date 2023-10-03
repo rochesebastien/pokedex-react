@@ -43,6 +43,7 @@
     right: 2rem;
     box-shadow: 0px 1.25px 0px 0px #600405;
     transition: 0.2s ease-in;
+    cursor: pointer;
 }
 
 .pokemon_info_ctn .close_btn:hover {
@@ -112,4 +113,5 @@
     -webkit-text-stroke: 5px #ffffff83;
     position: absolute;
     bottom: -7rem;
+    z-index: -1;
 }
