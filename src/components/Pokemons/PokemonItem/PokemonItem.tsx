@@ -4,12 +4,10 @@ import { Pokemon } from '../../../types/Pokemon.types';
 import { PokemonCell } from '../../../types/Pokemon.types';
 import './PokemonItem.css';
 
-function PokemonItem(props : PokemonCell) {
-    console.log(props);
-    
+function PokemonItem(props: PokemonCell) {
     const handleClick = () => {
         props.selected(props.pokemon)
-      };
+    };
 
     return (
 

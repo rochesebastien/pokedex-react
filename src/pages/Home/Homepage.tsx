@@ -31,7 +31,7 @@ function Homepage(props: any) {
                     <p>Ce projet est un projet personnel pour m’initier au framework React. Il utilise une API qui n’est pas ma propriété (retrouvez le lien à gauche). Il est en cours de développement et de réflexion, d’autres fonctionnalités pourraient alors voir le jour plus tard … </p>
                 </div> 
             </div>
-            <img id="homepage_pokemon" src={`/images/${choose_pokemon}.png`} />
+            {/* <img id="homepage_pokemon" src={`/images/${choose_pokemon}.png`} /> */}
         </div>
     )
 }

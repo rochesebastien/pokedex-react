@@ -2,15 +2,15 @@
     position: absolute;
     z-index: 1;
     display: block;
-    width: 80%;
-    height: 85%;
+    width: 60%;
+    height: 60%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 38px;
     border: 2px solid rgba(216, 216, 216, 0.622);
     box-shadow: 8px 24px 75px 9px rgba(0, 0, 0, 0.63);
-    background: #9c0101;
+    background: #b49d9dab;
     overflow: hidden;
 }
 
@@ -21,8 +21,8 @@
 .pokemon_info_ctn .title_ctn {
     color: #FFF;
     font-family: "Rubik";
-    font-size: 3rem;
-    padding: 2rem 0px;
+    font-size: 2rem;
+    padding-bottom: 1rem;
 }
 
 .pokemon_info_ctn .close_btn {
@@ -57,7 +57,7 @@
     width: 95%;
     display: flex;
     flex-direction: column;
-    gap: 19px;
+    gap: 6px;
     padding-left: 1.8rem;
 }
 
@@ -65,39 +65,46 @@
     width: 100%;
 }
 
-.stats_item {
-    width: 60%;
+.stats_item{
+    /* background-color: aqua; */
     display: flex;
-    border-radius: 0px 10px 10px 0px;
-    background: rgb(255, 255, 255);
-    box-shadow: 4px 6px 12px 2px rgba(0, 0, 0, 0.72);
+    flex-direction: column;
     font-family: "Rubik";
-    font-size: 47px;
-    color: red;
-    font-weight: bold;
-    border-radius: 0px 10px 10px 0px;
 }
 
-.stats_item .filled {
+.stats_item h3{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0px 0.5rem;
-    border-radius: 0px 10px 10px 0px;
-    background: #E0E0E0;
+    /* background-color: yellow; */
+    font-size: 1.2rem;
+    gap: 1rem;
+    padding: 0.3rem 1rem;
 }
 
-
-.stats_item .filled img {
-    width: 48px;
-    height: 48px;
+.stats_item h3 img{
+    width: 38px;
 }
+
+.stats_bar{
+    display: flex;
+    width: 80%;
+    height: 15px;
+    background-color: rgba(223, 227, 223, 0.721);
+    border-radius: 0px 24px 24px 0px;
+    margin-left: 1rem;
+}
+
+.stats_bar .filled{
+    background-color: green;
+    border-radius: 0px 24px 24px 0px;
+}
+
 
 #pokemon_info_img{
     position: absolute;
-    right: 0px;
-    bottom: 0px;
-    transform: scale(1.5);
+    right: -10%;
+    bottom: -20%;
+    transform: scale(0.7);
     z-index: -1;
 }
 

@@ -34,12 +34,11 @@ function PokemonsPage(props: any) {
         pokemonType.name === type.name
       )
     )
-    // setPokemons(
-    //   )
   }
 
   const handlePokemonSelection = (pokemon: Pokemon) => {
     setPokemonSelected(pokemon);
+    console.log(pokemon);
   }
 
 

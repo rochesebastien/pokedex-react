@@ -13,7 +13,7 @@ function PokemonInfo(props: any) {
         , [props.pokemon])
 
 
-    const handlePokemonSelection = () => {
+    const closePopup = () => {
         setPokemonInfo(null);
     }
 
@@ -23,53 +23,69 @@ function PokemonInfo(props: any) {
                 <div className="title_ctn">
                     <h1>{pokemon_info.name}</h1>
                 </div>
-                <button className='close_btn' onClick={() => handlePokemonSelection()}>X</button>
+                <button className='close_btn' onClick={() => closePopup()}>X</button>
                 <ul className="pokemon_info_stats">
                     <li>
                         <div className="stats_item">
-                            <div className="filled" style={{ width: pokemon_info.stats.HP / 252 * 100 + "%" }}>
-                                <img src="/icons/heart.svg" alt="" />
-                                <span>{pokemon_info.stats.HP}</span>
+                            <h3>
+                                <img src="/icons/life.svg" alt="" /><span> {"Vie : " + pokemon_info.stats.HP + " / 252"} </span>
+                            </h3>
+                            <div className="stats_bar">
+                                <span className="filled" style={{ width: pokemon_info.stats.HP / 252 * 100 + "%" }}></span>
+
                             </div>
                         </div>
                     </li>
                     <li>
                         <div className="stats_item">
-                            <div className="filled" style={{ width: pokemon_info.stats.attack / 252 * 100 + "%" }}>
-                                <img src="/icons/Atk.svg" alt="" />
-                                <span>{pokemon_info.stats.attack}</span>
+                            <h3>
+                                <img src="/icons/atk.svg" alt="" /><span> {"Attaque : " + pokemon_info.stats.attack + " / 252"} </span>
+                            </h3>
+                            <div className="stats_bar">
+                                <span className="filled" style={{ width: pokemon_info.stats.attack / 252 * 100 + "%" }}></span>
+
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div className="stats_item">
-                            <div className="filled" style={{ width: pokemon_info.stats.defense + "%" }}>
-                                <img src="/icons/Def.svg" alt="" />
-                                <span>{pokemon_info.stats.defense}</span>
+                    <div className="stats_item">
+                            <h3>
+                                <img src="/icons/def.svg" alt="" /><span> {"Défense : " + pokemon_info.stats.defense + " / 252"} </span>
+                            </h3>
+                            <div className="stats_bar">
+                                <span className="filled" style={{ width: pokemon_info.stats.defense / 252 * 100 + "%" }}></span>
+
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div className="stats_item">
-                            <div className="filled" style={{ width: pokemon_info.stats.special_attack / 252 * 100 + "%" }}>
-                                <img src="/icons/Atk Spe.svg" alt="" />
-                                <span>{pokemon_info.stats.special_attack}</span>
+                    <div className="stats_item">
+                            <h3>
+                                <img src="/icons/atk_spe.svg" alt="" /><span> {"Attaque Spéciale : " + pokemon_info.stats.special_attack + " / 252"} </span>
+                            </h3>
+                            <div className="stats_bar">
+                                <span className="filled" style={{ width: pokemon_info.stats.special_attack / 252 * 100 + "%" }}></span>
+
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div className="stats_item">
-                            <div className="filled" style={{ width: pokemon_info.stats.special_defense / 252 * 100 + "%" }}>
-                                <img src="/icons/Def Spe.svg" alt="" />
-                                <span>{pokemon_info.stats.special_defense}</span>
+                    <div className="stats_item">
+                            <h3>
+                                <img src="/icons/def_spe.svg" alt="" /><span> {"Défense Spéciale : " + pokemon_info.stats.special_defense + " / 252"} </span>
+                            </h3>
+                            <div className="stats_bar">
+                                <span className="filled" style={{ width: pokemon_info.stats.special_defense / 252 * 100 + "%" }}></span>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div className="stats_item">
-                            <div className="filled" style={{ width: pokemon_info.stats.speed / 252 * 100 + "%" }}>
-                                <img src="/icons/Spd.svg" alt="" />
-                                <span>{pokemon_info.stats.speed}</span>
+                    <div className="stats_item">
+                            <h3>
+                                <img src="/icons/spd.svg" alt="" /><span> {"Vitesse : " + pokemon_info.stats.speed + " / 252"} </span>
+                            </h3>
+                            <div className="stats_bar">
+                                <span className="filled" style={{ width: pokemon_info.stats.speed / 252 * 100 + "%" }}></span>
                             </div>
                         </div>
                     </li>
