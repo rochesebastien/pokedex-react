@@ -26,14 +26,14 @@ function PokemonsPage(props: any) {
   }
 
   const handleTypesSelection = (type: PokemonType) => {
-    // setType(type);
-    console.log("Type selectionné : ", type);
-
-    const test = pokemons.filter((pokemon: Pokemon) =>
-      pokemon.apiTypes.some((pokemonType: PokemonType) =>
-        pokemonType.name === type.name
-      )
+    if (!type) {
+      setPokemons(pokemons_save);
+      return;
+    }
+    const filtered_pokemons = pokemons.filter((pokemon: Pokemon) =>
+      pokemon.apiTypes && pokemon.apiTypes.some(pokemonType => pokemonType.name === type.name)
     )
+    setPokemons(filtered_pokemons);
   }
 
   const handlePokemonSelection = (pokemon: Pokemon) => {
@@ -63,6 +63,7 @@ function PokemonsPage(props: any) {
       <div className="pokemons_list_ctn">
         {pokemons.length > 0 ? (
           pokemons.map((pokemon: Pokemon) => (
+            // console.log(pokemon),
             <PokemonItem selected={handlePokemonSelection} key={pokemon.id} pokemon={pokemon} />
           ))
         ) : (

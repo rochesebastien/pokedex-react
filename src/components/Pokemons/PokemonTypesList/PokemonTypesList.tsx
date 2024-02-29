@@ -5,27 +5,34 @@ import './PokemonTypesList.css';
 
 function PokemonTypesList(props: any) {
     const [types, setTypes] = useState<PokemonType[]>([]);
+    const [filterBool, setFilterBool] = useState<boolean>(false);
     useEffect(() => {
         getPokemonTypes().then(types => {
             setTypes(types);
         });
     }, []);
 
-    const handleTypeSelection = (type_name : string) => {
-        // Appeler la fonction de rappel pour remonter la variable
-        props.typesSelected(type_name);
-      };
+    const handleTypeSelection = (type: PokemonType) => {
+
+        setFilterBool(!filterBool); // invert the boolean of the filter
+        props.typesSelected(filterBool ? type : null); // if filterBool is true, send the type, else send null
+    };
+
+
+    useEffect(() => {
+        // console.log("Filter : ", filterBool);
+    }, [filterBool]);
 
     return (
-
         <div className='pokemons_types_list'>
             {
                 types.map((type: PokemonType) => (
-                    <div className="pokemon_type" onClick={() => handleTypeSelection(type.name)} key={type.id}>
+                    // console.log("Type : ", type.id),
+                    // console.log("Selected Type : ", props.selectedType?.id),
+                    <div className={`pokemon_type ${filterBool && type === props.typesSelected ? 'selected' : ''}`} onClick={() => handleTypeSelection(type)} key={type.id}>
                         <img src={`${type.image}`} alt="" />
                         <span>{type.name}</span>
                     </div>
-
                 ))
             }
         </div>
