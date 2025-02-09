@@ -4,6 +4,10 @@ import { Pokemon } from '../../../types/Pokemon.types';
 import { PokemonCell } from '../../../types/Pokemon.types';
 import './PokemonItem.css';
 
+
+import LazyLoad from 'react-lazyload';
+
+
 function PokemonItem(props: PokemonCell) {
     const handleClick = () => {
         props.selected(props.pokemon)
@@ -12,7 +16,9 @@ function PokemonItem(props: PokemonCell) {
     return (
 
         <div key={props.pokemon.id} className='pokemons_item' onClick={handleClick}>
-            <img src={`${props.pokemon.image}`} alt="" />
+            <LazyLoad height={200} offset={100}>
+                <img src={`${props.pokemon.image}`} alt="" />
+            </LazyLoad>
             <span id='name'>{props.pokemon.name}</span>
             <span id='id'>{props.pokemon.id}</span>
         </div>
