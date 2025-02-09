@@ -9,6 +9,8 @@ import PokemonTypesList from '../../components/Pokemons/PokemonTypesList/Pokemon
 import { PokemonType } from '../../types/Pokemon.types';
 import { Pokemon } from '../../types/Pokemon.types';
 
+import LazyLoad from 'react-lazyload';
+
 function PokemonsPage(props: any) {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
   const [inputValue, setInputValue] = useState<string>("");
@@ -63,7 +65,6 @@ function PokemonsPage(props: any) {
       <div className="pokemons_list_ctn">
         {pokemons.length > 0 ? (
           pokemons.map((pokemon: Pokemon) => (
-            // console.log(pokemon),
             <PokemonItem selected={handlePokemonSelection} key={pokemon.id} pokemon={pokemon} />
           ))
         ) : (
@@ -73,8 +74,6 @@ function PokemonsPage(props: any) {
 
     </div>
   )
-
-
 }
 
 export default PokemonsPage
